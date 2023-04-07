@@ -67,8 +67,8 @@ def all_names_by_hobby(filename):
 def all_data(filename):
     """Return all the data in a file.
 
-    Each line in the file is a tuple of (name, species, personality, hobby,
-    saying).
+    Each line in the file is a tuple of 
+    (name, species, personality, hobby,saying).
 
     Arguments:
         - filename (str): the path to a data file
@@ -78,8 +78,11 @@ def all_data(filename):
     """
 
     all_data = []
-
+   
     # TODO: replace this with your code
+    data = open(filename)
+    for line in data:
+        all_data.append(tuple(line.rstrip().split("|")))
 
     return all_data
 
